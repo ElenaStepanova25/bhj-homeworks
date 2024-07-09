@@ -25,3 +25,20 @@ function clickCookie() {
 }
 
 cookieWidth.onclick = clickCookie;
+
+//Вариант от преподавателя
+/*
+const cookie = document.getElementById('cookie');
+const countClick = document.getElementById('clicker__counter');
+const speed = document.getElementById('clicker__speed');
+let timeClick;
+
+cookie.onclick = () => {
+  //устанавливаем размер при клике и накапливаем клики
+  cookie.width = ++countClick.textContent % 2 ? 250 : 200;
+  //расчитываем скорость клика
+  const speedFormated = (1 / ((Date.now() - timeClick) / 1000)).toFixed(2);
+  timeClick ? speed.textContent = speedFormated : null;
+  timeClick = Date.now();
+}
+*/
